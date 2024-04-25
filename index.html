@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kalkulator Suhu</title>
+</head>
+<body style="padding-left: 32px; padding-right: 32px; padding-top: 64px; padding-bottom: 64px;">
+    <main>
+        <header class="main-title" style="text-align: center;">
+            <h1>Kalkulator Suhu</h1>
+        </header>
+        
+        <section class="main-section">
+            <!-- Section Introduction -->
+            <section>
+                <p>Masukan suhu derajat Celsius (&deg;C) ke kotak dibawah, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg;F).</p>
+            </section>
+
+            <!-- Celsius to Fahrenheit Conversion -->
+            <form id="c-to-f">
+                <section class="section-celcius">
+                    <header>
+                        <h3>Celsius (&deg;C)</h3>
+                    </header>
+                    <article>
+                        <textarea rows="1" id="c-to-f-input" required></textarea>
+
+                        <div class="container-button">
+                            <button type="button" onclick="convertCtoF()">Convert</button>
+                            <button type="reset">Reset</button>
+                            <button type="button" onclick="reverseConversion()">Reverse</button>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="section-fahrenheit">
+                    <header>
+                        <h3>Fahrenheit (&deg;F)</h3>
+                    </header>
+                    <article>
+                        <textarea rows="1" id="c-to-f-output" readonly></textarea>
+                    </article>
+                </section>
+            </form>
+
+            <!-- Fahrenheit to Celsius Conversion -->
+            <form id="f-to-c">
+                <section class="section-fahrenheit">
+                    <header>
+                        <h3>Fahrenheit (&deg;F)</h3>
+                    </header>
+                    <article>
+                        <textarea rows="1" id="f-to-c-input" required></textarea>
+                    </article>
+                </section>
+
+                <section class="section-celcius">
+                    <header>
+                        <h3>Celsius (&deg;C)</h3>
+                    </header>
+                    <article>
+                        <textarea rows="1" id="f-to-c-output" readonly></textarea>
+                        <div class="container-button">
+                            <button type="button" onclick="convertFtoC()">Convert</button>
+                            <button type="reset">Reset</button>
+                            <button type="button" onclick="reverseConversion()">Reverse</button>
+                        </div>
+                    </article>
+                </section>
+            </form>
+
+            <section class="section-result">
+                <header>
+                    <h3>Cara Kalkulasi</h3>
+                </header>
+    
+                <article>
+                    <textarea rows="1">...(&deg;C) * (9/5) + 32 = ...(&deg;F)</textarea>
+                    
+                </article>
+            </section>
+
+            <!-- Section for Explanation -->
+            <section class="section-explanation">
+                <header>
+                    <h4 style="color: magenta;">Fahrenheit ke Celsius</h4>
+                    <h3>Cara Konversi dari Fahrenheit (&deg;F) ke Celsius (&deg;C)</h3>
+                </header>
+                <hr>
+                <article>
+                    <h4 class="formula-s-besar">Suhu S dalam derajat Fahrenheit (&deg;F) sama dengan suhu S dalam derajat Celsius (&deg;C) kali 9/5 tambah 32.</h4>
+                    <h1 class="formula-s">S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> x 9/5) + 32</h1>
+                    <p class="formula-p">atau</p>
+                    <h2 class="formula-s">S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> x 1.8) + 32</h2>
+                </article>
+            </section>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
